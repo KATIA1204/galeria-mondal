@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: #282c34;
+}
+.galeria-modal{
+    width: 100%;
+    height: 100%;
+   backdrop-filter: blur(1px);
+   position: absolute;
+   top: 0;
+   left: 0;
+   padding: 4%;
+   visibility: hidden;
+   z-index: 5px;
+ 
+}
+
+.galeria-modal span{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    font-size: 52px;
+    color: rgb(243, 84, 84);
+    cursor: pointer;
+
+    
+}
+.galeria-modal img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(0);
+  transition: transform 0.5s ease-in-out;  
+}
+
+section{
+    min-height: 100vh;
+    width: 100%;
+}
+.galeria{ 
+width: 100%;
+padding: 2%;
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-auto-rows: 30vh;
+
+
+}
+
+.galeria .single-galeria{
+
+    background-color: red;
+    border-radius: 7px;
+    margin: 0.5vw;
+    overflow: hidden;
+}
+
+.h-2{
+    grid-row: span 2;
+}
+
+.w-2{
+   grid-column:  span 2;
+}
+
+.galeria .single-galeria img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.25s ease-in-out;
+}
+
+.galeria .single-galeria img:hover{
+    transform: scale(1.1);
+}
+
+
+@media screen and (max-wdht: 764px){
+    .galeria{ 
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 15vh;
+    }
+} 
+
